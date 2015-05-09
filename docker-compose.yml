@@ -1,0 +1,17 @@
+web:
+  build: .
+  links:
+    - db
+  volumes:
+    - .:/var/www/wordpress
+  ports:
+    - "80:80"
+db:
+  image: tutum/mysql
+  environment:
+    MYSQL_USER: wordpress
+    MYSQL_PASS: password
+  volumes:
+    - /mnt/sda1/var/lib/wordpress:/var/lib/mysql
+  ports:
+    - "3306:3306"

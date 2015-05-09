@@ -1,0 +1,31 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "4.2.2",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/4.2.2.zip"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.0.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "wordpress": "4.*",
+    "fancyguy/webroot-installer": "1.0.0"
+  },
+  "extra": {
+    "webroot-dir": "public/wp",
+    "webroot-package": "wordpress"
+  }
+}
